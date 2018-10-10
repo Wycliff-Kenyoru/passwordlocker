@@ -36,3 +36,10 @@ class Password:
     def check_existing_password(self):
             # checks if the password exist with that email and return a booleon
         return Password.password_exists(self)
+
+    @classmethod
+    def find_by_email(cls, email):
+
+        for password in cls.password_list:
+            if password.email == password:
+                return password
