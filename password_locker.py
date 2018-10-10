@@ -66,5 +66,11 @@ class Password:
         password_found = password.find_password(password)
         pyperclip.copy(password_found.password)
 
+    def delete_password(self):
+
+        # deleting a saved password
+
+        Password.password_list.remove(self)
+
 
 
