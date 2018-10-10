@@ -43,3 +43,12 @@ class Password:
         for password in cls.password_list:
             if password.email == password:
                 return password
+#   loops through all the saved password and checks if any matches the emails
+    @classmethod
+    def password_exists(cls, email):
+        # checks if the password exists from the password list
+        for password in cls.password_list:
+            if password.email == password:
+                return True
+
+        return False
