@@ -26,3 +26,13 @@ class Password:
         gen_password = "".join(random.choice(char) for _ in range(8))
 
         return gen_password
+
+
+    def save_password(self):
+            # saves password into password list
+            Password.password_list.append(self)
+
+        #  Decorators allow you to make simple modifications to callable objects like functions, methods, or classes.
+    def check_existing_password(self):
+            # checks if the password exist with that email and return a booleon
+        return Password.password_exists(self)
