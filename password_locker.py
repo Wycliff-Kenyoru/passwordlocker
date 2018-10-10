@@ -52,3 +52,9 @@ class Password:
                 return True
 
         return False
+
+    @classmethod
+    def display_passwords(cls):
+
+        # returns a password list from the password list
+        return cls.password_list
