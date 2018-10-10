@@ -58,3 +58,13 @@ class Password:
 
         # returns a password list from the password list
         return cls.password_list
+
+    @classmethod
+    def copy_email(cls, password):
+
+        # copy the email for the password found
+        password_found = password.find_password(password)
+        pyperclip.copy(password_found.password)
+
+
+
