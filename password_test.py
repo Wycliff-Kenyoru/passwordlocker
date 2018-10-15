@@ -44,7 +44,7 @@ class TestPassword(unittest.TestCase):
     def test_find_by_email(self):
         # checking if the password is in the list and the display the info
         self.new_password.save_password()
-        test_password = Password("Test", "user", "duncanarani@gmail.com", "31740141")
+        test_password = Password("Test", "user", "wycliffkerongogmail.com", "110p05124h")
         test_password.save_password()
         found_password = Password.find_by_email("31740141")
 
@@ -53,19 +53,17 @@ class TestPassword(unittest.TestCase):
     def test_password_exists(self):
         # checking if we return the booleon if the passoword is not found
         self.new_password.Password()
-        test_password = Password("Test", "user", "duncanarani@gmail.com", "31740141")
+        test_password = Password("Test", "user", "wycliffkerongo@gmail.com", "110p05124h")
         test_password.save_password()
 
-        password_exists = Password.password_exists("31740141")
+        password_exists = Password.password_exists("110p05124")
         self.assertTrue(password_exists)
 
     def test_display_all_passwords(self):
         # this returns alist of all password saved
         self.assertEqual(Password.display_password(), Password.password_list)
 
-    def test.
-
-        copy_email(self)
+    def test.copy_email(self)
     # confirm that we are copying the email from the found password
     self.new_password.save_password()
     Password.copy_email("password")
